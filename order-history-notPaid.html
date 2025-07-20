@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order History Ticket Not Paid</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/style/order-history-notPaid.css">
+    <style>
+       
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <img src="./assets/img/tickitz 1.svg" alt="">
+            </a>
+            
+            <nav class="nav-links">
+                <a href="#" class="nav-link">Home</a>
+                <a href="#" class="nav-link">Movie</a>
+                <a href="#" class="nav-link">Buy Ticket</a>
+            </nav>
+            
+            <button class="mobile-nav-toggle">☰</button>
+            
+            <div class="nav-right">
+                <div class="location-dropdown">
+                    <span>Location</span>
+                    <svg width="12" height="8" viewBox="0 0 12 8" fill="currentColor">
+                        <path d="M6 8L0 2L1.41 0.59L6 5.17L10.59 0.59L12 2L6 8Z"/>
+                    </svg>
+                </div>
+                <button class="search-btn">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                    </svg>
+                </button>
+                <div class="profile-avatar"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container">
+        <div class="main-content">
+            <!-- Profile Sidebar -->
+            <aside class="profile-sidebar">
+                <div class="info-header">
+                    <span class="info-label">INFO</span>
+                    <button class="menu-dots">⋯</button>
+                </div>
+                
+                <div class="user-profile">
+                    <div class="user-avatar"></div>
+                    <h3 class="user-name">Raihan Insan Kamil</h3>
+                    <p class="user-status">Moviegoers</p>
+                </div>
+                
+                <div class="loyalty-section">
+                    <h4 class="loyalty-title">Loyalty Points</h4>
+                    <div class="loyalty-card">
+                        <div class="loyalty-header">
+                            <span class="loyalty-type">Moviegoers</span>
+                            <span class="loyalty-star">★</span>
+                        </div>
+                        <div class="loyalty-points">
+                            320<span class="points-unit">points</span>
+                        </div>
+                    </div>
+                    <div class="progress-section">
+                        <div class="progress-text">180 points become a master</div>
+                        <div class="progress-bar">
+                            <div class="progress-fill"></div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Content Area -->
+            <main class="content-area">
+                <!-- Tabs -->
+                <div class="tabs">
+                    <a href="#" class="tab">Account Settings</a>
+                    <a href="#" class="tab active">Order History</a>
+                </div>
+
+                <!-- Movie Entry 1 -->
+                <div class="form-container">
+                    <div class="form-grid">
+                        <div class="movie-info">        
+                            <p class="date">Tuesday, 07 July 2020 - 04:30pm</p>
+                            <p class="movie-title">Spider-Man: Homecoming</p>
+                            <div class="status-section">
+                                <span class="status-badge status-active">Ticket in active</span>
+                                <span class="status-badge status-not-paid">Not Paid</span>
+                            </div>
+                        </div>
+                        
+                        <div class="cinema-logo">
+                            <img src="./assets/img/CineOne21 2.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="show-details-section">
+                        <span class="show-details">Show Details ⌄</span>
+                    </div>
+
+                    <div class="modal">
+        <p class="title-card">Ticket Information</p>
+        <div class="acc-num">
+            <p class="field">No. Rekening Virtual</p>
+            <p class="number">12321328913829724</p>
+            <a href="" class="copy">Copy</a>
+        </div>
+        <div class="payment">
+            <p class="field">Total Payment</p>
+            <p class="money">$30</p>
+        </div>
+        <div class="due-date">
+            Pay this payment bill before it is due, <span>on June 23, 2023.</span>If the bill has not been paid by the specified time, it will be forfeited
+        </div>
+        <div class="check-payment">
+            <a href="">Cek Pembayaran</a>
+        </div>
+    </div>
+                </div>
+
+                
+
+                <!-- Movie Entry 3 -->
+                <div class="form-container">
+                    <div class="form-grid">
+                        <div class="movie-info">        
+                            <p class="date">Monday, 14 June 2020 - 02:00pm</p>
+                            <p class="movie-title">Avengers: End Game</p>
+                            <div class="status-section">
+                                <span class="status-badge status-used">Ticket used</span>
+                                <span class="status-badge status-paid">Paid</span>
+                            </div>
+                        </div>
+                        
+                        <div class="cinema-logo">
+                            <img src="./assets/img/ebv.id 2.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="show-details-section">
+                        <a href="order-history-result.html" class="show-details">Show Details ⌄</a>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/style/order-page.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="home-logo">
+                <img src="./assets/img/Tickitz 1.svg" alt="tickitz-logo">
+            </div>
+            <div class="nav-link">
+                <a href="home.html">Home</a>
+                <a href="movie.html">Movie</a>
+                <a href="movie.html">Buy Ticket</a>
+            </div>
+            <div class="btn-sign-log">
+                <div class="btn-log">
+                     <a href="login.html">SignIn</a>
+                </div>
+                <div class="btn-up">
+                    <a href="register.html">Sign Up</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    
+    <div class="progress">
+        <img src="./assets/img/Frame 5.svg" alt="progress">    
+    </div>
+
+<section id="summary">
+        <div class="container"> 
+        <div class="container-film">
+                <div class="film">
+                    <div class="img-title">
+                        <img src="./assets/img/spiderman-sear.svg" alt="movie">
+                        <p>Spider-Man: Homecoming</p>
+                    </div>  
+                </div>
+                <div class="genre-seat"> 
+                    <div><p>Action</p></div>
+                    <div><p>Adventure</p></div>
+                </div> 
+                <div class="type">
+                    <p>Regular - 13:00 PM</p>
+                    <a>Change</a>
+                </div>
+            
+            
+            <div class="title-screen">
+                <p>Choose Your Seat</p>
+            </div>    
+            
+            <div class="screen">
+                <p>Screen</p>
+            </div>
+
+            <div class="seating-container">
+                <div class="row-label">
+                    <div class="container-grid">
+                        <!-- First seats-grid -->
+                        <div class="seats-grid" id="seatsGrid">
+                            <!-- Baris 1 -->
+                            <span>A</span>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            
+                            <!-- Baris 2 -->
+                            <span>B</span>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+
+                            <!-- Baris 3 -->
+                            <span>C</span>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+
+                            <!-- Baris 4 -->
+                            <span>D</span>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+
+                            <!-- Baris 5 -->
+                            <span>E</span>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+
+                            <!-- Baris 6 -->
+                            <span>F</span>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+
+                            <!-- Baris 7 -->
+                            <span>G</span>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            
+                            <span></span>
+                            <span>1</span>
+                            <span>2</span>
+                            <span>3</span>
+                            <span>4</span>
+                            <span>5</span>
+                            <span>6</span>
+                            <span>7</span>
+                        </div>
+
+                        <!-- Second seats-grid (duplicate) -->
+                        <div class="seats-grid" id="seatsGrid">
+                            <!-- Baris 1 -->
+                            <span></span>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            
+                            <!-- Baris 2 -->
+                            <span></span>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+
+                            <!-- Baris 3 -->
+                            <span></span>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+
+                            <!-- Baris 4 -->
+                            <span></span>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+
+                            <!-- Baris 5 -->
+                            <span></span>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+
+                            <!-- Baris 6 -->
+                            <span></span>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+
+                            <!-- Baris 7 -->
+                            <span></span>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            
+                            <span></span>
+                            <span>1</span>
+                            <span>2</span>
+                            <span>3</span>
+                            <span>4</span>
+                            <span>5</span>
+                            <span>6</span>
+                            <span>7</span>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+            
+            <div class="title-seating">
+                <p>Seating Key</p>
+            </div>
+
+            <div class="color-map">
+                <div class="available"><p>Available</p></div>
+                <div class="container-selected">
+                    <p class="selected"></p>
+                    <p>Selected</p>
+                </div>
+                <div class="container-ln">
+                    <p class="love-nest"></p>
+                    <p>Love nest</p>
+                </div>
+                <div class="container-sold">
+                    <p class="sold"></p>
+                    <p>Sold</p>
+                </div>
+            </div>
+        </div> 
+            
+            <div class="container-pre-checkout">
+                <div class="pre-checkout">
+                    <div><img src="./assets/img/CineOne21 2.svg" alt=""></div>
+                    <div class="cinema"><p>CineOne21 Cinema</p></div>
+                    <div class="movie-selected">
+                        <p>Movie selected</p>
+                        <p class="detail">Spider-Man: Homecoming</p>
+                    </div>
+                    <div class="movie-date">
+                        <p>Tuesday, 07 July 2020</p>
+                        <p class="detail">13:00pm</p>
+                    </div>
+                    <div class="price">
+                        <p>One ticket price</p>
+                        <p class="detail">$10</p>
+                    </div>
+                    <div class="selected-seat">
+                        <p>Seat choosed</p>
+                        <p class="detail">C4, C5, C6</p>
+                    </div>
+                    <div class="price-total">
+                        <p>Total Payment</p>
+                        <p class="money">$30</p>
+                    </div>
+                    <div class="btn-checkout">
+                        <button type="button">
+                            <a href="payment.html">Checkout now</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+
+
+<footer>
+        <div class="container-footer">
+            <div class="footer1">
+                <div><img src="./assets/img/Tickitz 1.svg" alt=""></div>
+                <div><p>Stop waiting in line. Buy tickets</p></div>
+                <div><p>conveniently, watch movies quietly.</p></div>
+            </div>
+            <div class="footer2">
+                <div><p>Explore</p></div>
+                <div><p>Cinemas</p></div>
+                <div><p>Movies List</p></div>
+                <div><p>My Ticket</p></div>
+                <div><p>Notification</p></div>
+            </div>
+            <div class="footer3">
+                <div><p>Our Sponsor</p></div>
+                <div><img src="./assets/img/ebv.id 2.svg" alt="ebv"></div>
+                <div><img src="./assets/img/CineOne21 2.svg" alt="cineone"></div>
+                <div><img src="./assets/img/hiflix 2.svg" alt="hiflix"></div>
+            </div>
+            <div class="footer4">
+                <div class="follow"><p>Follow us</p></div>
+                <div class="facebook">
+                    <img src="./assets/img/eva_facebook-outline.svg" alt="facebook icon">
+                    <p>Tickitz Cinema id</p>
+                </div>
+                <div class="ig">
+                    <img src="./assets/img/bx_bxl-instagram.svg" alt="instagram icon">
+                    <p>tickitz.id</p>
+                </div>
+                <div class="x">
+                    <img src="./assets/img/eva_twitter-outline.svg" alt="twitter icon">
+                    <p>tickitz.id</p>
+                </div>
+                <div class="ytb">
+                    <img src="./assets/img/feather_youtube.svg" alt="youtube icon">
+                    <p>Tickitz Cinema id</p>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="copyright">
+            &copy; 2020 Tickitz. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script src="orderPage.js"></script>
+</body>
+</html>

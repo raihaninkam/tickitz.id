@@ -1,0 +1,342 @@
+:root {
+    --main--color : #1D4ED8;
+    --sec--color : #A0A3BD;
+    --font : 'Mulish';
+}
+
+* {
+     margin: 0;
+     padding: 0;
+     font-family: var(--font);
+     outline: none;
+     overflow-x: hidden;
+}
+
+
+
+header {
+    border: 0.1rem solid white;
+    background-color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.5rem 5rem;
+}
+
+
+.nav-link a {
+    text-decoration: none;
+    color: #0F172A;
+    padding: 0 2rem;
+    font-size: 14px;
+
+}
+
+.btn-sign-log {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-sign-log div a {
+    text-decoration: none;
+}
+
+.btn-log {
+    background-color: #fff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    border: 1.5px solid var(--main--color);
+}
+
+
+
+.btn-up {
+    background-color: #1D4ED8;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+}
+
+.btn-up:hover {
+    background-color: #3a7bc8;
+}
+
+.btn-log a {
+    color: var(--main--color);
+}
+
+.btn-up a {
+    color: #fff;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    gap: 10rem;
+}
+
+.flex-1 {
+    background-image: url(../img/cover-order-result.svg);
+    background-size: cover;
+    color: white;
+    padding: 5rem;
+    padding-bottom: 17rem;
+}
+
+.flex-1 img {
+    margin-bottom: 1rem;
+    margin-top: 4rem;
+}
+
+.thankyou {
+    font-weight: bold;
+    font-size: 48px;
+    margin-bottom: 1rem;
+}
+
+.lorem, .lorem2 {
+    font-size: 24px;
+    font-weight: 100;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.lorem2 {
+    margin-bottom: 2rem;
+}
+
+.download {
+display: flex;
+    /* gap: 1rem; */
+    font-weight: bold;
+}
+
+
+#hero {
+    background-color: rgba(160,163,189,0.2);
+}
+
+.container-right {
+    display: flex;
+    justify-content: center;
+}    
+
+
+.qr {
+    margin-bottom: 1rem;
+}
+
+
+.date-time {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.count-seats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.head {
+    color: var(--sec--color);
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+    border: 1px solid var(--sec--color);
+    border-radius: 4px;
+}
+
+.movie-category {
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.container-footer {
+    margin: 2rem 5rem;
+    display: flex;
+    justify-content: space-between;   
+    background-color: #fff;
+    padding-top: 2rem;
+}
+
+
+.footer1 div img {
+   margin-bottom: 1rem;
+}
+
+.footer1 div p {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 0.5rem;
+    font-weight: 100;
+}
+
+.footer2>div:first-child {
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.footer2>div:nth-child(2) {
+    font-weight: 200;
+}
+
+.footer2>div:nth-child(3) {
+    font-weight: 200;
+}
+
+.footer2>div:nth-child(4) {
+    font-weight: 200;
+}
+
+.footer2>div:nth-child(5) {
+    font-weight: 200;
+}
+
+.footer3 div p {
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.footer3 div img {
+    margin-bottom: 1rem;
+}
+
+.facebook {
+    display: flex;
+    gap: 1rem;
+    font-weight: 200;
+}
+
+.ig {
+    display: flex;
+    gap: 1rem;
+    font-weight: 200;
+}
+
+.x {
+    display: flex;
+    gap: 1rem;
+    font-weight: 200;
+}
+
+.ytb {
+    display: flex;
+    gap: 1rem;
+    font-weight: 200;
+}
+
+.follow {
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.copyright {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    font-weight: 100;
+}
+
+
+.bg-white {
+    background: url(../img/Group\ 1705.svg);
+    background-size: cover;
+    margin-top: 5rem;
+    padding: 2rem 2.8rem;
+    border-radius: 8px;
+    font-size: small;
+}
+
+.btn-download-tickets{
+    margin-top: 1rem;
+}
+
+.btn-download-tickets div a {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    padding: 0.7rem 5rem;
+}
+
+.download-tickets {
+    color: #1D4ED8;
+    border: 1px solid var(--main--color);
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.download-tickets a {
+    color: var(--main--color);
+}
+
+.done {
+   border: 1px solid var(--main--color);
+    border-radius: 4px;
+    background-color: #1D4ED8;
+}
+
+.done a {
+    color: #fff;
+}
+
+
+
+@media (max-width: 768px) {
+    .container {
+        flex-wrap: wrap;
+    }
+
+    
+
+    .container-footer {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .nav-link {
+        display: none;
+    }
+
+    .flex-2 {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        padding-bottom: 5rem;
+        margin-top: -6rem;
+    }
+
+    .home-logo {
+        width: 60%;
+        display: flex;
+    }
+
+    .btn-log , .btn-up  {
+        display: none;
+    }
+
+    
+}
+
+
+
+

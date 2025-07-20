@@ -1,0 +1,620 @@
+:root {
+    --main--color : #1D4ED8;
+    --sec--color : #A0A3BD;
+    --font : 'Mulish';
+}
+
+* {
+     margin: 0;
+     padding: 0;
+     font-family: var(--font);
+     outline: none;
+     /* overflow-x: hidden; */
+}
+
+header {
+    border-bottom: 0.1rem solid #DEDEDE;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.5rem 5rem;
+}
+
+
+.nav-link a {
+    text-decoration: none;
+    color: #0F172A;
+    padding: 0 2rem;
+    font-size: 14px;
+
+}
+
+.btn-sign-log {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-sign-log div a {
+    text-decoration: none;
+}
+
+.btn-log {
+    background-color: #fff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    border: 1.5px solid var(--main--color);
+}
+
+
+
+.btn-up {
+    background-color: #1D4ED8;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+}
+
+.btn-up:hover {
+    background-color: #3a7bc8;
+}
+
+.btn-log a {
+    color: var(--main--color);
+}
+
+.btn-up a {
+    color: #fff;
+}
+
+
+#home {
+    display: flex;
+    padding-right: 2rem;
+}
+
+.main-desc {
+    margin: 10rem 5rem;
+}
+
+.main-desc> div:first-child {
+    color: var(--main--color);
+    font-size: 18px;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.main-desc> div:nth-child(2) {
+    font-size: 47px;
+    font-weight: 500;
+    margin-bottom: 3rem;
+}
+
+.main-desc> div:nth-child(3) {
+    color: #A0A3BD;
+}
+
+.flex-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 4rem;
+    gap: 1rem;
+    margin-right: 3rem;
+
+}
+
+.spiderman-grid {
+    margin-top: 1.5rem;
+}
+
+
+.flex-container>div:nth-child(3) {
+    position: relative;
+    bottom: 6.5rem;
+}
+
+
+#reason {
+    display: flex;
+    justify-content: flex-start;
+
+}
+
+.rsn {
+    margin: 6rem 5rem;
+}
+
+.choose {
+    color: var(--main--color);
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.tagline {
+    font-weight: 400;
+    color: #121212;
+    font-size: 31px;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tagline p {
+    display: flex;
+    margin-right: 40rem;
+}
+
+.benefit-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    text-align: justify;
+}
+
+
+.benefit-check img {
+    padding: 1rem;
+    background-color: rgba(29,78,216,0.2);
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.benefit-guarantee img {
+    margin-bottom: 1rem;
+}
+
+.benefit-service img {
+    margin-bottom: 1rem;
+}
+
+.step-number {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 1rem;
+}
+
+.benefit-text {
+    color: var(--sec--color);
+    font-size: 18px;
+}
+
+
+#movie {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+
+
+.movies {
+    font-weight: bold;
+    font-size: 18px;
+    color: var(--main--color);
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+.desc-movie {
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.img-container {
+    display: flex;
+    gap: 1rem;
+    
+}
+
+.title {
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.genre {
+    display: flex;
+    gap: 1rem;
+}
+
+.genre div p {
+    padding: 0.5rem;
+    background-color: rgba(160,163,189,0.1);
+    border-radius: 20px;
+    font-size: 12px;
+    color: var(--sec--color);
+}
+
+.view {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.view a {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--main--color);
+    font-size: 18px;
+    margin-bottom: 2rem;
+}
+
+#upcoming-movie {
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+
+.section-title {
+    color: var(--main--color);
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.up-movie {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.up-movie div p {
+    font-weight: 400;
+    color: #121212;
+    font-size: 31px;
+    margin-bottom: 2rem;
+}
+
+.arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.arrow-left {
+    background-color: #A0A3BD;
+    padding: 12px;
+    border-radius:50%;
+}
+
+.arrow-right {
+    background-color: var(--main--color);
+    color: #fff;
+    padding: 12px;
+    border-radius: 50%;
+}
+
+.date {
+    font-weight: bold;
+    color: var(--main--color);
+    margin-bottom: 0.5rem;
+}
+
+#subscribe {
+    margin: 2rem 5rem;
+    background-image: url(../img/BG-newslater.svg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6rem;
+    
+}
+
+#subscribe .container-subscribe {
+    margin-top: 4rem;
+}
+
+.container-subscribe div p {
+    color: #fff;
+    font-size: 36px;
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+.input-btn {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 4rem;
+    border-color: #fff;
+    align-items: center;
+    outline: none;
+}
+
+input {
+    padding: 1rem 3rem;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 9px;
+
+}
+
+
+.btn-subscribe a{
+    padding: 1rem 3rem;
+    background-color: white;
+    text-decoration: none;
+    border-radius: 9px;
+    color: var(--main--color);
+    font-weight: bold;
+    outline: none;
+}
+
+
+.input-btn> div> input::placeholder{
+    color: white;
+}
+
+.container-footer {
+    margin: 4rem 5rem;
+    display: flex;
+    justify-content: space-between;   
+}
+
+
+.footer1 div img {
+   margin-bottom: 1rem;
+}
+
+.footer1 div p {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 0.5rem;
+    font-weight: 100;
+}
+
+.footer2>div:first-child {
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.footer2>div:nth-child(2) {
+    font-weight: 200;
+}
+
+.footer2>div:nth-child(3) {
+    font-weight: 200;
+}
+
+.footer2>div:nth-child(4) {
+    font-weight: 200;
+}
+
+.footer2>div:nth-child(5) {
+    font-weight: 200;
+}
+
+.footer3 div p {
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.footer3 div img {
+    margin-bottom: 1rem;
+}
+
+.facebook {
+    display: flex;
+    gap: 1rem;
+    font-weight: 200;
+}
+
+.ig {
+    display: flex;
+    gap: 1rem;
+    font-weight: 200;
+}
+
+.x {
+    display: flex;
+    gap: 1rem;
+    font-weight: 200;
+}
+
+.ytb {
+    display: flex;
+    gap: 1rem;
+    font-weight: 200;
+}
+
+.follow {
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.copyright {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    font-weight: 100;
+    
+}
+
+#hamburger-menu {
+    display: none;
+}
+
+
+
+
+
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+    .nav-link a {
+        display: none;
+    }
+
+    #hamburger-menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .btn-log, .btn-up {
+        display: none;
+    }
+
+    .home-logo img {
+        width: 80%;
+    }
+    
+    #home {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        margin-top: -5rem;
+    }
+
+    .flex-container {
+        margin-top: -4rem;
+        margin-left: 1.7rem;
+    }
+    .spiderman-grid {
+        margin-top: 1.5rem;
+    }
+
+    #reason {
+        margin-top: -5rem;
+    }
+
+    .choose p {
+        display: flex;
+        justify-content: c
+    }
+
+    .container {
+        overflow-x: scroll;
+    }
+
+    .choose {
+        text-align: center;
+        margin-left: 6rem;
+        margin-top: -1rem;
+    }
+
+    .tagline p {
+        text-align: center;
+        margin-left: 5rem;
+        width: 100%;
+
+    }
+
+    .benefit-container {
+        flex-wrap: wrap;
+        text-align: center;
+        width: 38%;
+        margin-top: 5rem;
+        padding-right: 5rem;
+        margin-right: 6rem;
+        display: flex;
+    }
+
+    .benefit-text {
+        display: flex;
+        flex-wrap: wrap;
+    
+    }
+
+    .desc-movie p {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .img-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .title{
+        text-align: center;
+    }
+
+    .genre {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2rem;
+    }
+
+   .section-title {
+        display: flex;
+        justify-content: center;
+        margin-top: 3rem;
+        
+   }
+
+   .up-movie {
+    text-align: center;
+    flex-wrap: wrap;
+   }
+
+   .arrow {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-left: 7rem;
+    margin-bottom: 2rem;
+   }
+
+   .date {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+   }
+
+   .container-subscribe div p {
+    flex-wrap: wrap;
+   }
+
+   .container-subscribe {
+    width: 1rem;
+   }
+
+   input {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 2rem;
+   }
+
+   .input-btn {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+   }
+
+   .subs p{
+    font-size: small;
+    text-align: center;
+    width: 100%;
+   }
+
+   .btn-subscribe a{
+    width: 60%;
+    font-size: small;
+    padding: 1px;
+
+   }
+
+   .container-footer {
+    display: flex;
+    flex-wrap: wrap;
+   }
+
+
+
+
+}
