@@ -85,6 +85,22 @@
             outline: none;
             border-color: #4a90e2;
         }
+
+        .eye-pwd {
+            display: flex;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .eye-pwd input {
+            border: none;
+            outline: none;
+        }
+
+        .eye-pwd img {
+            padding-right: 5px;
+            cursor: pointer;
+        }
         
         .checkbox-group {
             display: flex;

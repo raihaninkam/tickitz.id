@@ -457,6 +457,7 @@
             
             .mobile-nav-toggle {
                 display: block;
+                margin-left: 35rem;
             }
             
             .container {
@@ -471,6 +472,10 @@
             .profile-sidebar {
                 position: static;
                 order: 1;
+            }
+
+            .profile-avatar {
+                display: none;
             }
             
             
@@ -490,6 +495,14 @@
             .tab {
                 margin-right: 24px;
                 font-size: 14px;
+            }
+
+             .location-dropdown {
+                display: none;
+            }
+
+            .search-btn {
+                display: none;
             }
         }
 
