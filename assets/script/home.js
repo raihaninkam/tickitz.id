@@ -29,5 +29,56 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Authentication state management
-   
+    checkAuthState();
+    
+    function checkAuthState() {
+        const userData = localStorage.getItem('userData');
+        if (userData) {
+            showLoggedInUI();
+        } else {
+            showLoggedOutUI();
+        }
+    }
+    
+    function showLoggedInUI() {
+        const btnSignLog = document.querySelector('.btn-sign-log');
+        if (btnSignLog) {
+            btnSignLog.innerHTML = `
+                <div class="user-profile">
+                    <img src="./assets/img/raihan.jpg" alt="Profile" class="profile-pic">
+                    <div class="dropdown-content">
+                        <button id="logoutBtn">Logout</button>
+                    </div>
+                </div>
+                <button id="hamburger-menu">
+                    <img src="./assets/img/gg_menu-right-alt.svg" alt="menu icon" class="menu">
+                </button>
+            `;
+            
+            const logoutBtn = document.getElementById('logoutBtn');
+            if (logoutBtn) {
+                logoutBtn.addEventListener('click', function() {
+                    localStorage.removeItem('userData');
+                    window.location.reload();
+                });
+            }
+        }
+    }
+    
+    function showLoggedOutUI() {
+        const btnSignLog = document.querySelector('.btn-sign-log');
+        if (btnSignLog) {
+            btnSignLog.innerHTML = `
+                <div class="btn-log">
+                    <a href="login.html">SignIn</a>
+                </div>
+                <div class="btn-up">
+                    <a href="register.html">Sign Up</a>
+                </div>
+                <button id="hamburger-menu">
+                    <img src="./assets/img/gg_menu-right-alt.svg" alt="menu icon" class="menu">
+                </button>
+            `;
+        }
+    }
 });
