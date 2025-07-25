@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/style/register.css">
+    <script src="./assets/script/register.js" defer></script>
 </head>
 <body>
     <div class="merk">
@@ -34,15 +35,18 @@
         </div>
         </div>
         
-        <form>
+        <form id="form-register">
             <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" id="email" placeholder="Enter your email">
+                <input type="email" id="email" name="email" placeholder="Enter your email">
             </div>
             
             <div class="form-group">
                 <label for="password">Password</label>
-                <input type="password" id="password" placeholder="Enter your password">
+                <div class="pwd-input">
+                    <input type="password" id="password" name="password" placeholder="Enter your password">
+                    <img src="./assets/img/eye-solid-full.svg" alt="" width="20px">
+                </div>    
             </div>
             
             <div class="checkbox-group">
@@ -51,7 +55,7 @@
             </div>
             
             <button type="submit" class="btn-primary">Join For Free Now</button>
-            
+        </form>
             <div class="login-link">
                 Already have an account? <a href="login.html">Log in</a>
             </div>
@@ -66,7 +70,7 @@
                     Facebook
                 </button>
             </div>
-        </form>
+        
     </div>
     </main>
 </body>
