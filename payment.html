@@ -1,168 +1,423 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payment</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/style/payment.css">
-</head>
-<body>
-     <header>
-        <nav>
-            <div class="home-logo">
-                <img src="./assets/img/Tickitz 1.svg" alt="tickitz-logo">
-            </div>
-            <div class="nav-link">
-                <a href="home.html">Home</a>
-                <a href="movie.html">Movie</a>
-                <a href="movie.html">Buy Ticket</a>
-            </div>
-            <div class="btn-sign-log">
-                <div class="btn-log">
-                     <a href="login.html">SignIn</a>
-                </div>
-                <div class="btn-up">
-                    <a href="register.html">Sign Up</a>
-                </div>
-                <div class="menu">
-                    <a href="" id="hamburger-menu"><img src="./assets/img/gg_menu-right-alt.svg" alt=""></a>
-                </div>
-            </div>
-        </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment - Tickitz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              mulish: ["Mulish", "sans-serif"],
+            },
+            colors: {
+              primary: "#1D4ED8",
+              secondary: "#A0A3BD",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-gray-100 font-mulish">
+    <!-- Header -->
+    <header class="bg-white border-b border-gray-200">
+      <nav class="flex justify-between items-center px-8 lg:px-20 py-4">
+        <div class="flex items-center">
+          <img
+            src="./assets/img/Tickitz 1.svg"
+            alt="Tickitz Logo"
+            class="h-8"
+          />
+        </div>
+
+        <div class="hidden md:flex space-x-8">
+          <a href="#" class="text-gray-800 hover:text-primary transition-colors"
+            >Home</a
+          >
+          <a href="#" class="text-gray-800 hover:text-primary transition-colors"
+            >Movie</a
+          >
+          <a href="#" class="text-gray-800 hover:text-primary transition-colors"
+            >Buy Ticket</a
+          >
+        </div>
+
+        <div class="hidden md:flex space-x-4">
+          <a
+            href="#"
+            class="px-6 py-2 border border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition-colors"
+            >Sign In</a
+          >
+          <a
+            href="#"
+            class="px-6 py-2 bg-primary text-white rounded-lg hover:bg-blue-700 transition-colors"
+            >Sign Up</a
+          >
+        </div>
+
+        <div class="md:hidden">
+          <img src="./assets/img/gg_menu-right-alt.svg" alt="">
+        </div>
+      </nav>
     </header>
 
-     <div class="progress">
-        <img src="./assets/img/progress2.svg" alt="progress">    
+    <!-- Progress Bar -->
+    <div class="flex justify-center py-8">
+      <div class="flex items-center space-x-4">
+        <div class="flex items-center">
+          <img src="./assets/img/progress2.svg" alt="Progress">
+        </div>
+      </div>
     </div>
 
-    <section id="hero">
-        <div class="container">
-            <div class="section-title"><p>Payment Info</p></div>
-            <div class="dateAndTime">
-                <p class="date">DATE & TIME</p>
-                <p class="date2">Tuesday, 07 July 2020 at 02:00pm</p>
-            </div>
-            <div>
-                <p class="movie-title">MOVIE TITLE</p>
-                <p class="movie">Spider-Man: Homecoming</p>
-            </div>
-            <div>
-                <p class="cinema-name-title">CINEMA NAME</p>
-                <p class="cinemaName">CineOne21 Cinema</p>
-            </div>
-            <div>
-                <p class="tickets">NUMBER OF TICKETS</p>
-                <p class="total-tickets">3 pieces</p>
-            </div>
-            <div>
-                <p class="total ">TOTAL PAYMENT</p>
-                <p class="price">$30,00</p>
-            </div>
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-4 lg:px-8 pb-8">
+      <div class="bg-white rounded-lg shadow-sm p-6 lg:p-8">
+        <h1 class="text-2xl font-bold mb-8">Payment Info</h1>
 
-            <div class="personal-info">
-                <div><p class="personal-information">Personal Information</p></div>
-                <div>
-                    <p class="fullName">Full Name</p>
-                    <p><input type="text" placeholder="Jonas El Rodriguez"></p>
-                </div>
-                <div>
-                    <p class="email">Email</p>
-                    <p><input type="email" placeholder="jonasrodri123@gmail.com"></p>
-                </div>
-                <div>
-                    <p class="phoneNumber">Phone Number</p>
-                    <p><input type="text" placeholder="+62 | 81445687121"></p>
-                </div>
-            </div>
+        <!-- Booking Details -->
+        <div class="space-y-4 mb-8">
+          <div>
+            <p class="text-sm text-secondary uppercase tracking-wide mb-1">
+              Date & Time
+            </p>
+            <p class="text-sm pb-4 border-b border-secondary">
+              Tuesday, 07 July 2020 at 02:00pm
+            </p>
+          </div>
 
-            <div class="payment-method">
-                <div class="payment-1">
-                 <button type="button"icons_google.svg class="social-btn">
-                    <img src="./assets/img/logos_google-pay.svg" alt="Google">
-                    
-                </button>
-                <button type="button" class="social-btn">
-                    <img src="./assets/img/logos_visa.svg" alt="visa">  
-                </button>
-                 <button type="button" class="social-btn">
-                    <img src="./assets/img/Logo GoPay (SVG-240p) - FileVector69 1.svg" alt="gopay">
-                </button>
-                <button type="button" class="social-btn">
-                    <img src="./assets/img/Vector.svg" alt="vector">
-               </div>  
-               <div class="payment-2">   
-                </button>
-                 <button type="button" class="social-btn">
-                    <img src="./assets/img/Logo DANA (PNG-240p) - FileVector69 1.svg" alt="dana">    
-                </button>
-                <button type="button" class="social-btn">
-                    <img src="./assets/img/Bank BCA Logo (SVG-240p) - FileVector69 1.svg" alt="BCA">
-                    </button>
-                <button type="button" class="social-btn">
-                    <img src="./assets/img/Bank BRI (Bank Rakyat Indonesia) Logo (SVG-240p) - FileVector69 1.svg" alt="BRI">
-                    </button>
-                <button type="button" class="social-btn">
-                    <img src="./assets/img/ovo.svg  " alt="OVO">
-                    </button>
-                </div>
-            </div>
+          <div>
+            <p class="text-sm text-secondary uppercase tracking-wide mb-1">
+              Movie Title
+            </p>
+            <p class="text-sm pb-4 border-b border-secondary">
+              Spider-Man: Homecoming
+            </p>
+          </div>
 
-            <div class="btn-pay">
-                <button type="button"><a href="payment-info.html">Pay your order</a></button>
-            </div>
+          <div>
+            <p class="text-sm text-secondary uppercase tracking-wide mb-1">
+              Cinema Name
+            </p>
+            <p class="text-sm pb-4 border-b border-secondary">
+              CineOne21 Cinema
+            </p>
+          </div>
+
+          <div>
+            <p class="text-sm text-secondary uppercase tracking-wide mb-1">
+              Number of Tickets
+            </p>
+            <p class="text-sm pb-4 border-b border-secondary">3 pieces</p>
+          </div>
+
+          <div>
+            <p class="text-sm text-secondary uppercase tracking-wide mb-1">
+              Total Payment
+            </p>
+            <p
+              class="text-lg font-bold text-primary pb-4 border-b border-secondary"
+            >
+              $30.00
+            </p>
+          </div>
         </div>
-    </section>
 
+        <!-- Personal Information -->
+        <div class="mb-8">
+          <h2 class="text-xl font-bold mb-6">Personal Information</h2>
+          <form id="paymentForm" class="space-y-4">
+            <div>
+              <label class="block text-sm text-gray-600 mb-2">Full Name</label>
+              <input
+                type="text"
+                placeholder="Jonas El Rodriguez"
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+              />
+            </div>
 
-    <footer>
-        <div class="container-footer">
-            <div class="footer1">
-                <div><img src="./assets/img/Tickitz 1.svg" alt=""></div>
-                <div><p>Stop waiting in line. Buy tickets</p></div>
-                <div><p>conveniently, watch movies quietly.</p></div>
+            <div>
+              <label class="block text-sm text-gray-600 mb-2">Email</label>
+              <input
+                type="email"
+                placeholder="jonasrodri123@gmail.com"
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+              />
             </div>
-            <div class="footer2">
-                <div><p>Explore</p></div>
-                <div><p>Cinemas</p></div>
-                <div><p>Movies List</p></div>
-                <div><p>My Ticket</p></div>
-                <div><p>Notification</p></div>
+
+            <div>
+              <label class="block text-sm text-gray-600 mb-2"
+                >Phone Number</label
+              >
+              <input
+                type="text"
+                placeholder="+62 | 81445687121"
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+              />
             </div>
-            <div class="footer3">
-                <div><p>Our Sponsor</p></div>
-                <div><img src="./assets/img/ebv.id 2.svg" alt="ebv"></div>
-                <div><img src="./assets/img/CineOne21 2.svg" alt="cineone"></div>
-                <div><img src="./assets/img/hiflix 2.svg" alt="hiflix"></div>
-            </div>
-            <div class="footer4">
-                <div class="follow"><p>Follow us</p></div>
-                <div class="facebook">
-                    <img src="./assets/img/eva_facebook-outline.svg" alt="facebook icon">
-                    <p>Tickitz Cinema id</p>
-                </div>
-                <div class="ig">
-                    <img src="./assets/img/bx_bxl-instagram.svg" alt="instagram icon">
-                    <p>tickitz.id</p>
-                </div>
-                <div class="x">
-                    <img src="./assets/img/eva_twitter-outline.svg" alt="twitter icon">
-                    <p>tickitz.id</p>
-                </div>
-                <div class="ytb">
-                    <img src="./assets/img/feather_youtube.svg" alt="youtube icon">
-                    <p>Tickitz Cinema id</p>
-                </div>
-            </div>
+          </form>
         </div>
+
+        <!-- Payment Methods -->
+        <div class="mb-8">
+          <h2 class="text-lg font-semibold mb-4">Choose Payment Method</h2>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
+            <button
+              class="payment-method p-4 border border-gray-200 rounded-lg hover:border-primary hover:bg-gray-50 transition-all duration-200 flex flex-col items-center justify-center"
+            >
+              <div
+                class="w-12 h-8 rounded mb-2 flex items-center justify-center"
+              >
+                <img src="./assets/img/logos_google-pay.svg" alt="">
+            </button>
+
+            <button
+              class="payment-method p-4 border border-gray-200 rounded-lg hover:border-primary hover:bg-gray-50 transition-all duration-200 flex flex-col items-center justify-center"
+            >
+              <div
+                class="w-12 h-8 rounded mb-2 flex items-center justify-center"
+              >
+                <img src="./assets/img/logos_visa.svg" alt="">
+              </div>
+            </button>
+
+            <button
+              class="payment-method p-4 border border-gray-200 rounded-lg hover:border-primary hover:bg-gray-50 transition-all duration-200 flex flex-col items-center justify-center"
+            >
+              <div
+                class="w-12 h-8 rounded mb-2 flex items-center justify-center"
+              >
+                <img src="./assets/img/Logo GoPay (SVG-240p) - FileVector69 1.svg" alt="">
+              </div>
+            </button>
+
+            <button
+              class="payment-method p-4 border border-gray-200 rounded-lg hover:border-primary hover:bg-gray-50 transition-all duration-200 flex flex-col items-center justify-center"
+            >
+              <div
+                class="w-12 h-8 rounded mb-2 flex items-center justify-center"
+              >
+                <img src="./assets/img/logos_paypal.png" alt="">
+              </div>
+            </button>
+          </div>
+
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <button
+              class="payment-method p-4 border border-gray-200 rounded-lg hover:border-primary hover:bg-gray-50 transition-all duration-200 flex flex-col items-center justify-center"
+            >
+              <div
+                class="w-12 h-8 rounded mb-2 flex items-center justify-center"
+              >
+                <img src="./assets/img/Logo DANA (PNG-240p) - FileVector69 1.svg" alt="">
+              </div>
+            </button>
+
+            <button
+              class="payment-method p-4 border border-gray-200 rounded-lg hover:border-primary hover:bg-gray-50 transition-all duration-200 flex flex-col items-center justify-center"
+            >
+              <div
+                class="w-12 h-8 rounded mb-2 flex items-center justify-center"
+              >
+                <img src="./assets/img/Bank BCA Logo (SVG-240p) - FileVector69 1.svg" alt="">
+              </div>
+            </button>
+
+            <button
+              class="payment-method p-4 border border-gray-200 rounded-lg hover:border-primary hover:bg-gray-50 transition-all duration-200 flex flex-col items-center justify-center"
+            >
+              <div
+                class="w-12 h-8 rounded mb-2 flex items-center justify-center"
+              >
+                <img src="./assets/img/Bank BRI (Bank Rakyat Indonesia) Logo (SVG-240p) - FileVector69 1.svg" alt="">
+              </div>
+            </button>
+
+            <button
+              class="payment-method p-4 border border-gray-200 rounded-lg hover:border-primary hover:bg-gray-50 transition-all duration-200 flex flex-col items-center justify-center"
+            >
+              <div
+                class="w-12 h-8 rounded mb-2 flex items-center justify-center"
+              >
+                <img src="./assets/img/ovo.svg" alt="">
+              </div>
+            </button>
+          </div>
         </div>
-        <div class="copyright">
-            &copy; 2020 Tickitz. All Rights Reserved.
+
+        <!-- Pay Button -->
+        <div class="flex justify-center">
+          <button
+            id="payButton"
+            class="bg-primary text-white px-16 py-3 rounded-lg font-bold hover:bg-blue-700 transition-colors"
+          >
+            Pay your order
+          </button>
         </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white mt-8">
+      <div class="max-w-6xl mx-auto px-8 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <img
+              src="./assets/img/Tickitz 1.svg"
+              alt="Tickitz Logo"
+              class="h-8 mb-4"
+            />
+            <p class="text-gray-600 text-sm">
+              Stop waiting in line. Buy tickets
+            </p>
+            <p class="text-gray-600 text-sm">
+              conveniently, watch movies quietly.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-bold mb-4">Explore</h3>
+            <ul class="space-y-2 text-sm text-gray-600">
+              <li>Cinemas</li>
+              <li>Movies List</li>
+              <li>My Ticket</li>
+              <li>Notification</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="font-bold mb-4">Our Sponsor</h3>
+            <div class="space-y-3">
+              <div
+                class="w-16 h-8 flex items-center justify-center"
+              >
+                <img src="./assets/img/ebv.id 2.svg" alt="">
+              </div>
+              <div
+                class="w-16 h-8 flex items-center justify-center"
+              >
+                <img src="./assets/img/CineOne21 2.svg" alt="">
+              </div>
+              <div
+                class="w-16 h-8 flex items-center justify-center"
+              >
+                <img src="./assets/img/hiflix 2.svg" alt="">
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="font-bold mb-4">Follow us</h3>
+            <div class="space-y-3 text-sm text-gray-600">
+              <div class="flex items-center space-x-2">
+                <img src="./assets/img/eva_facebook-outline.svg" alt="">
+                <span>Tickitz Cinema id</span>
+              </div>
+              <div class="flex items-center space-x-2">
+                <img src="./assets/img/bx_bxl-instagram.svg" alt="">
+                <span>tickitz.id</span>
+              </div>
+              <div class="flex items-center space-x-2">
+                <img src="./assets/img/eva_twitter-outline.svg" alt="">
+                <span>tickitz.id</span>
+              </div>
+              <div class="flex items-center space-x-2">
+                <img src="./assets/img/feather_youtube.svg" alt="">
+                <span>Tickitz Cinema id</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center py-4 border-t border-gray-200">
+        <p class="text-gray-600 text-sm">
+          &copy; 2020 Tickitz. All Rights Reserved.
+        </p>
+      </div>
     </footer>
 
+    <!-- Overlay Modal -->
+    <div
+      id="paymentModal"
+      class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden"
+    >
+      <div class="bg-white rounded-2xl p-6 w-full max-w-md mx-4 relative">
+        <!-- Close Button -->
+        <button
+          id="closeModal"
+          class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            ></path>
+          </svg>
+        </button>
 
-</body>
+        <div class="text-center">
+          <h2 class="text-xl font-bold mb-6">Payment Info</h2>
+
+          <div
+            class="flex items-center justify-between mb-6 p-4 bg-gray-50 rounded-lg"
+          >
+            <div class="text-left">
+              <p class="text-sm text-secondary">No. Rekening Virtual</p>
+              <p class="font-bold text-lg">12321328913829724</p>
+            </div>
+            <button
+              class="px-4 py-2 border border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition-colors"
+            >
+              Copy
+            </button>
+          </div>
+
+          <div class="flex justify-between items-center mb-6">
+            <span class="text-secondary">Total Payment</span>
+            <span class="font-bold text-xl text-primary">$30</span>
+          </div>
+
+          <div class="text-sm text-secondary mb-6 p-4 bg-gray-50 rounded-lg">
+            Pay this payment bill before it is due,
+            <span class="text-red-600 font-semibold">on June 23, 2023.</span>
+            If the bill has not been paid by the specified time, it will be
+            forfeited
+          </div>
+
+          <div class="space-y-3">
+            <button
+              class="w-full bg-primary text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+            ><a href="ticket-result.html">
+              Check Payment
+              </a>
+            </button>
+            <button
+              id="payLater"
+              class="w-full text-primary py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors"
+            >
+              Pay Later
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./assets/script/payment.js"></script>
+  </body>
 </html>
