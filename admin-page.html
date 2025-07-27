@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tickitz Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script src="./assets/script/admin-page.js"></script>
+    <style>
+        /* Menyembunyikan konten dropdown secara default */
+        .dropdown-content {
+            display: none;
+        }
+        /* Menampilkan konten dropdown ketika kelas 'show' ditambahkan */
+        .dropdown-content.show {
+            display: block;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gray-50">
+    <!-- Header aplikasi Tickitz -->
+    <header class="bg-white py-4 shadow-sm">
+        <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
+            <div class="text-2xl font-bold text-blue-600">Tickitz</div>
+            
+            <nav class="hidden lg:flex gap-8">
+                <a href="home.html" class="text-slate-500 text-sm font-medium hover:text-blue-600 transition-colors">Home</a>
+                <a href="movie.html" class="text-slate-500 text-sm font-medium hover:text-blue-600 transition-colors">Movie</a>
+                <a href="movie.html" class="text-slate-500 text-sm font-medium hover:text-blue-600 transition-colors">Buy Ticket</a>
+            </nav>
+            
+            <button class="lg:hidden text-slate-500 text-xl p-2">☰</button>
+            
+            <div class="hidden lg:flex items-center gap-4">
+                <div class="flex items-center gap-1.5 text-slate-500 text-sm cursor-pointer px-3 py-2 rounded-md hover:bg-slate-50 transition-colors">
+                    <span>Location</span>
+                    <svg width="12" height="8" viewBox="0 0 12 8" fill="currentColor">
+                        <path d="M6 8L0 2L1.41 0.59L6 5.17L10.59 0.59L12 2L6 8Z"/>
+                    </svg>
+                </div>
+                <button class="text-slate-500 p-2 rounded-md hover:bg-slate-50 transition-colors">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                    </svg>
+                </button>
+                <div class="w-9 h-9 rounded-full bg-blue-600"></div>
+            </div>
+        </div>
+    </header>
+
+    <div class="max-w-6xl mx-auto px-6 py-8">
+        <!-- Bagian Grafik Penjualan -->
+        <div class="bg-white rounded-lg shadow-sm border border-blue-200 p-6 mb-6">
+            <div class="flex items-center justify-between mb-6">
+                <h2 class="text-xl font-semibold text-gray-800">Sales Chart</h2>
+                <div class="flex items-center space-x-3">
+                    <!-- Dropdown Film -->
+                    <div class="relative dropdown">
+                        <button onclick="toggleDropdown('moviesDropdown')" class="flex items-center justify-between px-4 py-2 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 min-w-[140px]">
+                            <span class="text-sm text-gray-700" id="moviesSelected">Movies Name</span>
+                            <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div id="moviesDropdown" class="dropdown-content absolute z-10 w-full mt-1 bg-white border border-gray-300 rounded-md shadow-lg">
+                            <button onclick="selectOption('moviesSelected', 'Movies Name')" class="w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-t-md">Movies Name</button>
+                            <button onclick="selectOption('moviesSelected', 'Avengers Endgame')" class="w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">Avengers Endgame</button>
+                            <button onclick="selectOption('moviesSelected', 'Spider-Man')" class="w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">Spider-Man</button>
+                            <button onclick="selectOption('moviesSelected', 'The Batman')" class="w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">The Batman</button>
+                            <button onclick="selectOption('moviesSelected', 'Fast & Furious')" class="w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">Fast & Furious</button>
+                            <button onclick="selectOption('moviesSelected', 'Top Gun Maverick')" class="w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-b-md">Top Gun Maverick</button>
+                        </div>
+                    </div>
+
+                    <!-- Dropdown Periode -->
+                    <div class="relative dropdown">
+                        <button onclick="toggleDropdown('periodDropdown')" class="flex items-center justify-between px-4 py-2 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 min-w-[140px]">
+                            <span class="text-sm text-gray-700" id="periodSelected">Weekly</span>
+                            <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div id="periodDropdown" class="dropdown-content absolute z-10 w-full mt-1 bg-white border border-gray-300 rounded-md shadow-lg">
+                            <button onclick="selectOption('periodSelected', 'Daily')" class="w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-t-md">Daily</button>
+                            <button onclick="selectOption('periodSelected', 'Weekly')" class="w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">Weekly</button>
+                            <button onclick="selectOption('periodSelected', 'Monthly')" class="w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">Monthly</button>
+                            <button onclick="selectOption('periodSelected', 'Yearly')" class="w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-b-md">Yearly</button>
+                        </div>
+                    </div>
+
+                    <button class="flex items-center px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.207A1 1 0 013 6.5V4z"></path>
+                        </svg>
+                        Filter
+                    </button>
+                </div>
+            </div>
+            
+            <div class="mb-4">
+                <span class="text-sm text-gray-600" id="salesChartTitle">All Movies Overview</span>
+            </div>
+            
+            <div class="h-64">
+                <canvas id="salesChart"></canvas>
+            </div>
+        </div>
+
+        <!-- Bagian Penjualan Tiket -->
+        <div class="bg-white rounded-lg shadow-sm border p-6">
+            <div class="flex items-center justify-between mb-6">
+                <h2 class="text-xl font-semibold text-gray-800">Ticket Sales</h2>
+                <div class="flex items-center space-x-3">
+                    <!-- Dropdown Kategori -->
+                    <div class="relative dropdown">
+                        <button onclick="toggleDropdown('categoryDropdown')" class="flex items-center justify-between px-4 py-2 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 min-w-[140px]">
+                            <span class="text-sm text-gray-700" id="categorySelected">Category</span>
+                            <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div id="categoryDropdown" class="dropdown-content absolute z-10 w-full mt-1 bg-white border border-gray-300 rounded-md shadow-lg">
+                            <button onclick="selectOption('categorySelected', 'Category')" class="w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-t-md">Category</button>
+                            <button onclick="selectOption('categorySelected', 'Adventure')" class="w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">Adventure</button>
+                            <button onclick="selectOption('categorySelected', 'Drama')" class="w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">Drama</button>
+                            <button onclick="selectOption('categorySelected', 'Comedy')" class="w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">Comedy</button>
+                            <button onclick="selectOption('categorySelected', 'Horror')" class="w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">Horror</button>
+                            <button onclick="selectOption('categorySelected', 'Romance')" class="w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-b-md">Romance</button>
+                        </div>
+                    </div>
+
+                    <!-- Dropdown Lokasi -->
+                    <div class="relative dropdown">
+                        <button onclick="toggleDropdown('locationDropdown')" class="flex items-center justify-between px-4 py-2 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 min-w-[140px]">
+                            <span class="text-sm text-gray-700" id="locationSelected">Location</span>
+                            <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div id="locationDropdown" class="dropdown-content absolute z-10 w-full mt-1 bg-white border border-gray-300 rounded-md shadow-lg">
+                            <button onclick="selectOption('locationSelected', 'Location')" class="w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-t-md">Location</button>
+                            <button onclick="selectOption('locationSelected', 'Jakarta')" class="w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">Jakarta</button>
+                            <button onclick="selectOption('locationSelected', 'Bandung')" class="w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">Bandung</button>
+                            <button onclick="selectOption('locationSelected', 'Purwokerto')" class="w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">Purwokerto</button>
+                            <button onclick="selectOption('locationSelected', 'Surabaya')" class="w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">Surabaya</button>
+                            <button onclick="selectOption('locationSelected', 'Medan')" class="w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-b-md">Medan</button>
+                        </div>
+                    </div>
+
+                    <button class="flex items-center px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.207A1 1 0 013 6.5V4z"></path>
+                        </svg>
+                        Filter
+                    </button>
+                </div>
+            </div>
+            
+            <div class="mb-4">
+                <span class="text-sm text-gray-600" id="ticketChartTitle">All Categories, All Locations</span>
+            </div>
+            
+            <div class="h-64">
+                <canvas id="ticketChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
