@@ -1,22 +1,28 @@
+<!-- pg. 5 -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie Description</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <meta name="description" content="pg. 5">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+    </style>
     <link rel="stylesheet" href="./assets/style/description.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./assets/script/description.js" defer></script>
+    <title>Details #1</title>
 </head>
-<body>
-    <header>
+
+<body class="font-primary">
+   <header>
         <nav>
             <div class="home-logo">
                 <img src="./assets/img/Tickitz 1.svg" alt="tickitz-logo">
             </div>
             <div class="nav-link">
-                <a href="home.html">Home</a>
+                <a href="#home">Home</a>
                 <a href="movie.html">Movie</a>
                 <a href="movie.html">Buy Ticket</a>
             </div>
@@ -27,126 +33,82 @@
                 <div class="btn-up">
                     <a href="register.html">Sign Up</a>
                 </div>
-                <div class="menu">
-                    <a href="#" id="hamburger-menu"><img src="./assets/img/gg_menu-right-alt.svg" alt=""></a>
-                </div>
+                <button id="hamburger-menu">
+                    <img src="./assets/img/gg_menu-right-alt.svg" alt="menu icon" class="menu">
+                </button>
+
             </div>
         </nav>
     </header>
 
-    <section id="hero">
-            <div class="container-img">
-                <div><img src="./assets/img/spiderman-film.svg" alt=""></div>
+    <main class="d-flex flex-col">
+        <section id="hero">
+            <div id="mov-bdrop"></div>
+        </section>
+
+        <section id="mov-detail">
+            <div class="detail-wrapper">
+                
             </div>
-            <div class="container">
-                <div class="film">
-                    <div class="title"><p>Spider-Man: Homecoming</p></div>
-                    <div class="genre">
-                        <div><p>Action</p></div>
-                        <div class="genre2"><p>Adventure</p></div>
+            <div class="synopsis-wrapper">
+                <h3>Synopsis</h3>
+                
+            </div>
+        </section>
+
+        <section id="book" class="d-flex flex-col">
+            <h2>Book Tickets</h2>
+            <div class="grid-cont">
+                <h4>Choose Date</h4>
+                <h4>Choose Time</h4>
+                <h4>Choose Location</h4>
+                <h4>Showtimes and Tickets</h4>
+                <select name="" id="">
+                    <option value="">21/07/20</option>
+                </select>
+                <select name="" id="">
+                    <option value="">08 : 30 AM</option>
+                </select>
+                <select name="" id="">
+                    <option value="">Purwokerto</option>
+                </select>
+                <button>Filter</button>
+            </div>
+            <div class="choose-cinema d-flex flex-col mt-8">
+                <div class="title d-flex">
+                    <h4>Choose Cinema</h4>
+                    <h4>39 Result</h4>
+                </div>
+                <div class="cinema-icon d-flex">
+                    <div id="cinema-1" class="cinema"><img src="/assets/img/ebv.id 2.svg"
+                            alt="">
+                            <i class="nf nf-cod-chevron_down"></i>
+                        </div>
+                    <div id="cinema-2" class="cinema"><img src="/assets/img/hiflix 2.svg"
+                            alt="">
+                            <i class="nf nf-cod-chevron_down"></i>
                     </div>
-                    <div class="release-directed">
-                        <div>
-                            <div class="release"><p>Release date</p></div>
-                            <div class="date"><p>June 28, 2017</p></div>
+                    <div id="cinema-3" class="cinema"><img
+                            src="/assets/img/CineOne21 2.svg" alt="">
+                            <i class="nf nf-cod-chevron_down"></i>
                         </div>
-                        <div>  
-                            <div class="directed"><p>Directed by</p></div>
-                            <div class="direct"><p>Jon Watss</p></div>
+                    <div id="cinema-4" class="cinema"><img src="/assets/img/ebv.id 2.svg"
+                            alt="">
+                            <i class="nf nf-cod-chevron_down"></i>
                         </div>
-                    </div>
-                    <div class="duration-casts">
-                        <div>
-                            <div class="duration"><p>Duration</p></div>
-                            <div class="time"><p>2 hours 13 minutes</p></div>
-                        </div>
-                        <div>    
-                            <div class="cast"><p>Casts</p></div>
-                            <div class="actor"><p>Tom Holland, Michael keaton, Robert Downey Jr</p></div>
-                        </div>    
+                </div>
+                <div class="pg-number">
+                    <div class="cinema-num d-flex justify-center">
+                        <div class="num num-1">1</div>
+                        <div class="num num-2">2</div>
+                        <div class="num num-3">3</div>
+                        <div class="num num-4">4</div>
                     </div>
                 </div>
+                <button><a href="../ticket/order.html">Book Now</a></button>
             </div>
-    </section>
-
-    <section id="hero-desc">
-        <div class="container">
-            <div class="sinopsis">
-                <p>Synopsis</p>
-                <p>Thrilled by his experience with the Avengers, Peter returns home, where he lives with his Aunt May, under the watchful eye of his new mentor Tony Stark, Peter tries to fall back into his normal daily routine - distracted by thoughts of proving himself to be more than just your friendly neighborhood Spider-Man - but when the Vulture emerges as a new villain, everything that Peter holds most important will be threatened. </p>
-            </div>
-
-            <div class="book">
-                <div class="books"><p>Book Tickets</p></div>
-
-                <div class="flex-desc">
-                    <div class="container-form">
-                    <form action="">
-                    <div>    
-                        <div class="label-input"><p>Choose Date</p></div>
-                        <div><input type="date"></div>
-                    </div>
-                    <div>    
-                        <div class="label-input"><p>Choose time</p></div>
-                        <div><input type="time"></div>
-                    </div>
-                    <div>    
-                        <div class="label-input"><p>Choose location</p></div>
-                        <div><input type="text"></div>
-                    </div>
-                    
-                    <div class="btn-filter">
-                       <button type="submit">
-                            <a href="">Filter</a>
-                       </button>
-                    </div>
-                    </form>
-                    </div>
-                </div>
-            </div>
-        </div>    
-    </section>
-
-    <section id="choose-cinema">
-        <div class="cinema">
-            <p>Choose Cinema</p>
-            <p>39 Result</p>
-        </div>
-
-        <div class="container-card">
-            <div>
-                <img src="./assets/img/ebv.id 2.svg" alt="">
-            </div>
-            <div class="cinema-hiflix">
-                <img src="./assets/img/hiflix 3.svg" alt="">
-            </div>
-            <div>
-                <img src="./assets/img/CineOne21 2.svg" alt="">
-            </div>
-            <div>
-                <img src="./assets/img/ebv.id 2.svg" alt="">
-            </div>
-        </div>
-
-        <div class="btn-number">
-            <p class="one">1</p>
-            <p>2</p>
-            <p>3</p>
-            <p>4</p>
-        </div>
-
-        <div class="btn-book">
-            <button>
-                <a href="order-page.html">Book Now</a>
-            </button>
-        </div>
-    </section>
-
-
-
-
-
-
+        </section>
+    </main>
 
     <footer>
         <div class="container-footer">
@@ -193,7 +155,6 @@
             &copy; 2020 Tickitz. All Rights Reserved.
         </div>
     </footer>
-
-
 </body>
+
 </html>
